@@ -31,7 +31,10 @@ User can share their post via facebook and whatsapp.
 5.Admin can view all comments. If any user report against any comment, admin can hide that comment and that comment is not showing in post details page.
 6.Admin can announce any notice.
 
-Dependencies
+Technologies:
+React Js, Node JS, MongoDB
+
+Dependencies:
 
 1.tailwind css
 2.daisy UI
