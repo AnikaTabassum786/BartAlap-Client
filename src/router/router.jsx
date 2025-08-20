@@ -24,6 +24,7 @@ import ReportedComments from '../pages/ReportedComments/ReportedComments';
 import MakeAnnouncement from '../pages/MakeAnnouncement/MakeAnnouncement';
 import Forbidden from '../pages/Forbidden/Forbidden';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
+import AllPosts from '../pages/Posts/AllPosts';
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
         index: true,
         Component: Home
       },
+      
       {
         path: '/posts',
         Component: Posts
