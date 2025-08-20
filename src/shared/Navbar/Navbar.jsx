@@ -55,6 +55,14 @@ const Navbar = () => {
       </li>
 
       <li>
+        <NavLink to="/all-posts">
+          {({ isActive }) => (
+            <span className={isActive ? "active font-bold" : ""}>All Post</span>
+          )}
+        </NavLink>
+      </li>
+
+      <li>
         <NavLink to="/membership">
           {({ isActive }) => (
             <span className={isActive ? "active font-bold" : ""}>Membership</span>
