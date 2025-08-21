@@ -84,7 +84,7 @@ const AllPost = () => {
             >
               <div>
                 <h3 className="font-semibold text-lg mb-2">{post.postTitle}</h3>
-                <p className="text-gray-700 mb-2 line-clamp-3">
+                <p className=" mb-2 line-clamp-3">
                   {post.postDescription}
                 </p>
               </div>

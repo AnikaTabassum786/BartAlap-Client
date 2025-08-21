@@ -130,7 +130,7 @@ useEffect(() => {
   return (
 
     <>
-   <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md my-8">
+   <div className="max-w-3xl mx-auto p-6  rounded-lg shadow-md my-8">
   {/* Author Info */}
   <div className="text-center mb-8">
     <img
@@ -139,7 +139,7 @@ useEffect(() => {
       className="w-24 h-24 rounded-full mx-auto object-cover shadow-md"
     />
     <h2 className="text-xl font-bold mt-3">{profileInfo.name}</h2>
-    <p className="text-gray-500 text-sm">{profileInfo.email}</p>
+    <p className=" text-sm">{profileInfo.email}</p>
    
   </div>
 
@@ -149,10 +149,10 @@ useEffect(() => {
       <p className="inline-block  py-1 text-sm  text-blue-800 rounded-full">
       #{post.tag}
     </p>
-     <p className="text-sm text-gray-400 ">{new Date(profileInfo.created_at).toLocaleDateString('en-CA')}</p>
+     <p className="text-sm">{new Date(profileInfo.created_at).toLocaleDateString('en-CA')}</p>
     </div>
     <h1 className="text-2xl font-bold mb-2 text-justify">{post.postTitle}</h1>
-    <p className="text-gray-700 mb-2 text-justify">{post.postDescription}</p>
+    <p className="mb-2 text-justify">{post.postDescription}</p>
     
   </div>
 
@@ -207,7 +207,7 @@ useEffect(() => {
   {/* Comment Table */}
   <div className="overflow-x-auto mt-6">
     <table className="w-full text-sm border border-gray-200">
-      <thead className="bg-gray-100">
+      <thead className="">
         <tr>
           <th className="text-left px-4 py-2">Email</th>
           <th className="text-left px-4 py-2">Comment</th>
