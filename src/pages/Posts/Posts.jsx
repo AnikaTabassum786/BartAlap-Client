@@ -3,6 +3,7 @@ import useAxios from '../../hooks/useAxios';
 import { useQuery } from '@tanstack/react-query';
 import PostCard from '../Home/PostCard';
 import { IoIosClose } from "react-icons/io";
+import Marquee from "react-fast-marquee";
 
 const Posts = () => {
   const axiosInstance = useAxios();
@@ -23,20 +24,6 @@ const Posts = () => {
          return res.data
        }
   })
-
-  // console.log(announcements)
-
-
-  // const { data: posts = [], isLoading } = useQuery({
-  //     queryKey: ['posts', page, sortByPopularity],
-  //     queryFn: async () => {
-  //         const res = await axiosInstance.get(
-  //             `/all-posts?page=${page}&sortByPopularity=${sortByPopularity}`
-  //         );
-  //         return res.data;
-  //     },
-  // });
-
 
   const { data: posts = [], isLoading } = useQuery({
     queryKey: ['posts', page, sortByPopularity, searchTag, activeTag],
@@ -100,21 +87,12 @@ const Posts = () => {
             Search
           </button>
           {activeTag && (
-            // <button className='flex items-center justify-center btn'>
-            //   <div onClick={clearSearch} >
-            //    Clear  
-            //    <IoIosClose size={20} className='mt-0.5'/>
-            // </div>
-           
-            // </button>
-
             <button className="btn flex items-center justify-center bg-red-500 text-white" onClick={clearSearch}>
   <div  className="flex items-center gap-1">
     Clear  
     <IoIosClose size={20} className="mt-0.5 " />
   </div>
 </button>
-
           )}
         </div>
 
@@ -169,15 +147,19 @@ const Posts = () => {
           </div>
         </div>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : posts.length > 0 ? (
-            posts.map((post, i) => <PostCard key={i} post={post} />)
-          ) : (
-            <p>No posts found.</p>
-          )}
-        </div> */}
+         <Marquee>
+                       {
+                        posts.map((post,index)=>{
+                          return(
+                            <div key={index} className="py-8 mx-8 text-blue-500 font-medium whitespace-nowrap">
+                           
+                                {post.postTitle}
+                             
+                            </div>
+                          )
+                        })
+                       }
+        </Marquee>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center md:place-items-stretch">
           {isLoading || isTagLoading ? (

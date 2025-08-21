@@ -1,4 +1,5 @@
 
+import Count from '../../components/Count';
 import Posts from '../Posts/Posts';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
            
             <Posts></Posts>
+            <Count></Count>
         </div>
     );
 };

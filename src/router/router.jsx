@@ -24,7 +24,8 @@ import ReportedComments from '../pages/ReportedComments/ReportedComments';
 import MakeAnnouncement from '../pages/MakeAnnouncement/MakeAnnouncement';
 import Forbidden from '../pages/Forbidden/Forbidden';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
-import AllPosts from '../pages/Posts/AllPosts';
+import AllPost from '../pages/AllPost/AllPost';
+
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
         index: true,
         Component: Home
       },
+      {
+        path: '/all-posts',
+        Component: AllPost
+      },
       
       {
         path: '/posts',
@@ -44,7 +49,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/post/:id',
-        loader: ({ params }) => fetch(`https://server-forum.vercel.app/post/${params.id}`, {
+        loader: ({ params }) => fetch(`http://localhost:3000/post/${params.id}`, {
           credentials: 'include',
         }),
         element: <PrivateRoute><PostDetails></PostDetails></PrivateRoute>

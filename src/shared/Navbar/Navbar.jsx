@@ -55,7 +55,6 @@ const Navbar = () => {
       </li>
 
      
-
       <li>
         <NavLink to="/all-posts">
           {({ isActive }) => (

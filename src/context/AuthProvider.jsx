@@ -43,7 +43,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser)
 
             //  if (currentUser?.email) {
-            //     axiosInstance.post(`https://server-forum.vercel.app/jwt`, {
+            //     axiosInstance.post(`http://localhost:3000/jwt`, {
             //         email: currentUser?.email
             //     })
             //         .then(res => {
@@ -54,7 +54,7 @@ const AuthProvider = ({children}) => {
 
             if (currentUser?.email) {
                 const userData = { email: currentUser.email }
-                axiosInstance.post('https://server-forum.vercel.app/jwt',userData,{withCredentials:true})
+                axiosInstance.post('http://localhost:3000/jwt',userData,{withCredentials:true})
                 .then(res=>{
                     console.log(res.data)
                 })
