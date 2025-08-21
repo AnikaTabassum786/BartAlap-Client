@@ -89,14 +89,14 @@ const PaymentForm = () => {
     }
 
     return (
-        <div>
+        <div className='mt-20'>
 
 
-            <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className=" space-y-4 bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto">
                 <CardElement>
 
                 </CardElement>
-                <button type='submit' disabled={!stripe} className='btn  btn-primary'>
+                <button type='submit' disabled={!stripe} className='btn bg-blue-100 text-blue-500  hover:bg-blue-200'>
                     Pay {amountInCents} Cents for Membership
                 </button>
                 {

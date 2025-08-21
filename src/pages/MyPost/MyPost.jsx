@@ -69,10 +69,10 @@ const MyPost = () => {
         <p>Loading...</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="min-w-full border border-gray-300">
+          <table className="min-w-full border ">
             <thead>
-              <tr className="bg-gray-100">
-                <th className="px-4 py-2 text-left">Post Title</th>
+              <tr className="">
+                <th className="px-4 py-2 text-left ">Post Title</th>
                 <th className="px-4 py-2 text-center">Votes</th>
                 <th className="px-4 py-2 text-center">Comment</th>
                 <th className="px-4 py-2 text-center">Delete</th>
@@ -87,7 +87,7 @@ const MyPost = () => {
                   </td>
                   <td className="px-4 py-2 text-center">
                     <Link to={`/post/${post._id}`}>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded cursor-pointer">
+                    <button className="btn bg-blue-100 text-blue-500  hover:bg-blue-200 px-3 py-1 rounded cursor-pointer">
                       Comment
                     </button>
                     </Link>
@@ -95,7 +95,7 @@ const MyPost = () => {
                   <td className="px-4 py-2 text-center">
                     <button
                       onClick={() => handleDelete(post._id)}
-                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded cursor-pointer"
+                      className="bg-red-400 hover:bg-red-500 text-white px-3 py-1 rounded cursor-pointer"
                     >
                       Delete
                     </button>

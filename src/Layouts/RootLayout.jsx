@@ -7,7 +7,10 @@ const RootLayout = () => {
     return (
         <div className='max-w-6xl mx-auto'>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className='min-h-[calc(100vh-238px)]'>
+                <Outlet></Outlet>
+            </div>
+
             <Footer></Footer>
         </div>
     );

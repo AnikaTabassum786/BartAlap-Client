@@ -17,12 +17,12 @@ const Posts = () => {
   const [tagSelected, setTagSelected] = useState('');
 
 
-    const {data: announcements=[]} = useQuery({
-       queryKey: ['announcements'],
-       queryFn: async()=>{
-         const res = await axiosInstance.get('/announcements');
-         return res.data
-       }
+  const { data: announcements = [] } = useQuery({
+    queryKey: ['announcements'],
+    queryFn: async () => {
+      const res = await axiosInstance.get('/announcements');
+      return res.data
+    }
   })
 
   const { data: posts = [], isLoading } = useQuery({
@@ -61,19 +61,19 @@ const Posts = () => {
     },
   });
 
-   const { data: countPosts = {} } = useQuery({
-      queryKey: ['posts'],
-      queryFn: async () => {
-        const res = await axiosInstance.get(`/posts/count`);
-        return res.data;
-      },
-      // enabled: !!user?.email,
-    });
+  const { data: countPosts = {} } = useQuery({
+    queryKey: ['posts'],
+    queryFn: async () => {
+      const res = await axiosInstance.get(`/posts/count`);
+      return res.data;
+    },
+    // enabled: !!user?.email,
+  });
 
   return (
     <div>
       <div>
-        <h1 className="text-center text-2xl font-semibold my-6 italic">Welcome Our Platform</h1>
+        <h1 className="text-center text-2xl font-semibold mt-20 italic">Welcome Our Platform</h1>
 
         <div className="my-8 flex gap-2 justify-center">
           <input
@@ -83,16 +83,16 @@ const Posts = () => {
             value={searchTag}
             onChange={(e) => setSearchTag(e.target.value)}
           />
-          <button onClick={handleSearch} className="btn btn-primary">
+          <button onClick={handleSearch} className="btn bg-blue-100 text-blue-500  hover:bg-blue-200">
             Search
           </button>
           {activeTag && (
-            <button className="btn flex items-center justify-center bg-red-500 text-white" onClick={clearSearch}>
-  <div  className="flex items-center gap-1">
-    Clear  
-    <IoIosClose size={20} className="mt-0.5 " />
-  </div>
-</button>
+            <button className="btn flex items-center justify-center bg-red-400 hover:bg-red-500 text-white" onClick={clearSearch}>
+              <div className="flex items-center gap-1">
+                Clear
+                <IoIosClose size={20} className="mt-0.5 " />
+              </div>
+            </button>
           )}
         </div>
 
@@ -103,7 +103,7 @@ const Posts = () => {
               <button
                 key={tag}
                 onClick={() => setTagSelected(tag)}
-                className={`badge badge-outline cursor-pointer px-3 py-4 text-sm ${tagSelected === tag ? 'bg-blue-800 text-gray-200 font-semibold' : ''
+                className={`badge badge-outline cursor-pointer px-3 py-4 text-sm ${tagSelected === tag ? 'bg-blue-100 text-blue-500  hover:bg-blue-200 font-semibold' : ''
                   }`}
               >
                 {tag}
@@ -114,10 +114,10 @@ const Posts = () => {
                 onClick={() => setTagSelected('')}
                 className="badge badge-secondary text-sm px-3 py-4  btn bg-red-500 text-white"
               >
-                Clear <IoIosClose size={20} className='mt-0.5'/>
+                Clear <IoIosClose size={20} className='mt-0.5' />
               </button>
 
-              
+
             )}
           </div>
         </div>
@@ -125,7 +125,7 @@ const Posts = () => {
         <div className="text-center my-8">
           <button
             onClick={() => setSortByPopularity((prev) => !prev)}
-            className="bg-blue-800 text-gray-200 font-semibold px-4 py-2 rounded cursor-pointer"
+            className="bg-blue-100 text-blue-500  hover:bg-blue-200 font-semibold px-4 py-2 rounded cursor-pointer"
           >
             {sortByPopularity ? 'Sort by Newest' : 'Sort by Popularity'}
           </button>
@@ -134,31 +134,31 @@ const Posts = () => {
         </div>
 
         <div >
-         
+
           <div>
-            {announcements.map((announcement,index)=>{
-              return(
+            {announcements.map((announcement, index) => {
+              return (
                 <div key={index} className='my-6 rounded-lg shadow-sm bg-gray-50 w-full p-4'>
-                <p className='text-lg font-medium'>{announcement.title}</p>
-                <p className='mt-4'>{announcement.description}</p>
+                  <p className='text-lg font-medium text-gray-900'>{announcement.title}</p>
+                  <p className='mt-4 text-gray-700'>{announcement.description}</p>
                 </div>
               )
             })}
           </div>
         </div>
 
-         <Marquee>
-                       {
-                        posts.map((post,index)=>{
-                          return(
-                            <div key={index} className="py-8 mx-8 text-blue-500 font-medium whitespace-nowrap">
-                           
-                                {post.postTitle}
-                             
-                            </div>
-                          )
-                        })
-                       }
+        <Marquee>
+          {
+            posts.map((post, index) => {
+              return (
+                <div key={index} className="py-8 mx-8 text-blue-400 font-medium whitespace-nowrap">
+
+                  {post.postTitle}
+
+                </div>
+              )
+            })
+          }
         </Marquee>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center md:place-items-stretch">
@@ -179,21 +179,21 @@ const Posts = () => {
 
 
         <div className="text-center my-12 space-x-2">
-        <button
-          disabled={page === 1}
-          onClick={() => setPage((p) => Math.max(p - 1, 1))}
-          className="btn btn-primary"
-        >
-          Prev
-        </button>
-        <span className="font-semibold text-lg">{page}</span>
-        <button 
-          onClick={() => setPage((p) => p + 1)}
-          className=" btn btn-primary"
-        >
-          Next
-        </button>
-      </div>
+          <button
+            disabled={page === 1}
+            onClick={() => setPage((p) => Math.max(p - 1, 1))}
+            className="btn bg-blue-100 text-blue-500  hover:bg-blue-200"
+          >
+            Prev
+          </button>
+          <span className="font-semibold text-lg">{page}</span>
+          <button
+            onClick={() => setPage((p) => p + 1)}
+            className=" btn bg-blue-100 text-blue-500  hover:bg-blue-200"
+          >
+            Next
+          </button>
+        </div>
 
       </div>
     </div>

@@ -117,53 +117,70 @@ const AddPost = () => {
             />
             </div>
             <p className="text-gray-600">{users.email}</p>
-            <p className="text-xl font-semibold">{users.name}</p>
+            <p className="text-xl font-semibold text-gray-800">{users.name}</p>
             
           </div>
 
           {/* Post Title */}
           <div>
-            <label className="block font-medium">Post Title</label>
+            <label className="block font-medium text-black">Post Title</label>
             <input
               type="text"
               {...register('postTitle', { required: true })}
-              className="w-full border p-2 rounded"
+              className="w-full border border-black p-2 rounded"
             />
             {errors.postTitle && <p className="text-red-500 text-sm">This field is required</p>}
           </div>
 
           {/* Description */}
           <div>
-            <label className="block font-medium">Post Description</label>
+            <label className="block font-medium text-black">Post Description</label>
             <textarea
               {...register('postDescription', { required: true })}
-              className="w-full border p-2 rounded"
+              className="w-full border border-black p-2 rounded"
               rows={4}
             />
             {errors.postDescription && <p className="text-red-500 text-sm">This field is required</p>}
           </div>
 
           {/* Tag */}
-          <div>
-            <label className="block font-medium">Tag</label>
+          {/* <div>
+            <label className="block font-medium text-black">Tag</label>
             <select
               {...register('tag', { required: true })}
-              className="w-full border p-2 rounded"
+              className="w-full border border-black p-2 rounded"
             >
-              <option value="">Select a tag</option>
-              <option value="Technology">Technology</option>
-              <option value="Science">Science</option>
+              <option className='text-black' value="">Select a tag</option>
+              <option className='text-black' value="Technology">Technology</option>
+              <option className='text-black' value="Science">Science</option>
             
-              <option value="Education">Education</option>
+              <option className='text-black' value="Education">Education</option>
             </select>
             {errors.tag && <p className="text-red-500 text-sm">This field is required</p>}
-          </div>
+          </div> */}
+
+          <div>
+  <label className="block font-medium text-black dark:text-white">Tag</label>
+  <select
+    {...register('tag', { required: true })}
+    className="w-full border border-black dark:border-gray-300 p-2 rounded bg-white dark:bg-gray-700 text-black dark:text-white"
+  >
+    <option value="" >
+      Select a tag
+    </option>
+    <option value="Technology">Technology</option>
+    <option value="Science">Science</option>
+    <option value="Education">Education</option>
+  </select>
+  {errors.tag && <p className="text-red-500 text-sm">This field is required</p>}
+</div>
+
 
           {/* Submit */}
           <div>
             <button
               type="submit"
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
+              className="btn bg-blue-100 text-blue-500  hover:bg-blue-200 px-4 py-2 rounded  cursor-pointer"
               disabled={uploading}
             >
               {uploading ? 'Uploading...' : 'Submit Post'}

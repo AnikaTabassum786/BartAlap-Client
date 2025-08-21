@@ -22,7 +22,7 @@ const stripePromise = loadStripe(import.meta.env.VITE_payment_Key)
 const Membership = () => {
     return (
         <Elements stripe={stripePromise}>
-            <p className='text-center text-2xl font-semibold my-6 italic'> Membership Page for Payment</p>
+            <p className='text-center text-2xl font-semibold my-6 italic '> Membership Page for Payment</p>
             <PaymentForm ></PaymentForm>
           
         </Elements>

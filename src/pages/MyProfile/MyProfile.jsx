@@ -203,7 +203,7 @@ const MyProfile = () => {
 
       {/* User Stats Chart */}
       <div className="mt-10">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">My Stats</h3>
+        <h3 className="text-xl font-semibold  mb-4">My Stats</h3>
         <div className="flex justify-center">
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>

@@ -6,8 +6,8 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
     return (
         <div>
-             <div className='w-11/12 mx-auto bg-black p-10 mt-8'>
-            <div className='flex flex-col lg:flex-row justify-between items-center gap-6 text-white'>
+             <div className=' mx-auto  p-10 mt-8 w-full shadow-2xl'>
+            <div className='flex flex-col lg:flex-row justify-between items-center gap-6 '>
 
                 <div className='font-medium text-lg text-center lg:text-start'>
                   BartAlap
