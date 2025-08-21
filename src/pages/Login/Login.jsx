@@ -26,7 +26,7 @@ const Login = () => {
   }
   return (
     <div>
-      <div className="hero h-[80vh] ">
+      <div className="hero h-[100vh] ">
         <div className=" card bg-base-100 w-full max-w-sm  shadow-2xl">
           <p className='text-xl text-start pt-2 px-6 font-semibold'>Login</p>
           <div className="flex justify-center  card-body">

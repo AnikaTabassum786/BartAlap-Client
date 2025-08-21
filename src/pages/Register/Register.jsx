@@ -90,7 +90,7 @@ const Register = () => {
         <div>
 
 
-            <div className="hero-content flex-col  lg:flex-row-reverse h-[90vh]">
+            <div className="hero-content flex-col  lg:flex-row-reverse h-[120vh]">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <p className='text-xl text-start pt-2 px-6 font-semibold'>Registration</p>
                     <div className="card-body">
