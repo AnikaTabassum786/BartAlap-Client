@@ -25,6 +25,7 @@ import MakeAnnouncement from '../pages/MakeAnnouncement/MakeAnnouncement';
 import Forbidden from '../pages/Forbidden/Forbidden';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import AllPost from '../pages/AllPost/AllPost';
+import Comments from '../pages/Comments/Comments';
 
 
 
@@ -38,11 +39,15 @@ export const router = createBrowserRouter([
         index: true,
        element:<Home></Home>
       },
+      
       {
         path: '/all-posts',
         element: <AllPost></AllPost>
       },
-      
+      {
+        path: '/comments',
+        element: <Comments></Comments>
+      },
       {
         path: '/posts',
         element:<Posts></Posts>

@@ -71,6 +71,11 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/comments" className={({ isActive }) => (isActive ? "active font-bold" : "")}>
+          Notice
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/membership" className={({ isActive }) => (isActive ? "active font-bold" : "")}>
           Membership
         </NavLink>
