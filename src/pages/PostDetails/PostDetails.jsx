@@ -130,7 +130,7 @@ useEffect(() => {
   return (
 
     <>
-   <div className="max-w-3xl mx-auto p-6  rounded-lg shadow-md my-8">
+   <div className="max-w-3xl mx-auto p-6  rounded-lg shadow-md my-8 mt-20">
   {/* Author Info */}
   <div className="text-center mb-8">
     <img
