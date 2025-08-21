@@ -1,32 +1,4 @@
-// import { useQuery } from '@tanstack/react-query';
-// import useAuth from '../../hooks/useAuth';
-// import useAxios from '../../hooks/useAxios';
 
-
-// const MyPost = () => {
- 
-//     const {user} = useAuth()
-//     const axiosInstance = useAxios()
-//     console.log(user.email)
-
-//     const { data: posts = []} = useQuery({
-//     queryKey: ['my-posts', user?.email],
-//     enabled: !!user?.email,
-//     queryFn: async () => {
-//       const res = await axiosInstance.get(`/posts/${user.email}`); 
-//       return res.data;
-//     },
-//     });
-
-//     console.log(posts)
-//     return (
-//         <div>
-//             My Post
-//         </div>
-//     );
-// };
-
-// export default MyPost;
 
 
 import { useQuery } from '@tanstack/react-query';

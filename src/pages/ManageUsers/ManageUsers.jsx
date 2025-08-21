@@ -71,7 +71,7 @@ const ManageUsers = () => {
 
       <table className="table-auto w-full border border-gray-300 mt-6">
         <thead>
-          <tr className="bg-gray-200">
+          <tr className="">
             <th className="border px-4 py-2">#</th>
             <th className="border px-4 py-2">Name</th>
             <th className="border px-4 py-2">Email</th>
@@ -93,7 +93,7 @@ const ManageUsers = () => {
                   user.role === "admin" ? (
                     <button className="btn btn-disabled">Already Admin</button>
                   ) : (
-                    <button className="btn btn-primary" onClick={() => handleMakeAdmin(user._id)}>
+                    <button className="btn bg-blue-100 text-blue-500  hover:bg-blue-200" onClick={() => handleMakeAdmin(user._id)}>
                       Make Admin
                     </button>
                   )

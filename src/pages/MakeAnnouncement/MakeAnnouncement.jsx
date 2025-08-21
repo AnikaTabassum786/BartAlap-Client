@@ -49,7 +49,7 @@ const MakeAnnouncement = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 bg-white shadow rounded">
+    <div className="max-w-xl mx-auto mt-10 p-6  shadow rounded">
       <h2 className="text-2xl font-bold mb-4">Make Announcement</h2>
 
       {/* Author Info Display */}
@@ -70,7 +70,7 @@ const MakeAnnouncement = () => {
             defaultValue={user?.displayName || ""}
             {...register("name")}
             readOnly
-            className="border p-2 w-full bg-gray-100 "
+            className="border p-2 w-full"
           />
         </div>
 
@@ -103,7 +103,7 @@ const MakeAnnouncement = () => {
         {/* Submit */}
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
+          className="bg-blue-100 text-blue-500  hover:bg-blue-200 px-4 py-2 rounded  cursor-pointer"
         >
           Submit
         </button>

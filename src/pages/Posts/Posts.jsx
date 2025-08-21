@@ -5,6 +5,7 @@ import PostCard from '../Home/PostCard';
 import { IoIosClose } from "react-icons/io";
 import Marquee from "react-fast-marquee";
 
+
 const Posts = () => {
   const axiosInstance = useAxios();
   const [page, setPage] = useState(1);
@@ -176,6 +177,17 @@ const Posts = () => {
             <p>No posts found.</p>
           )}
         </div>
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+  {posts.length > 0 ? (
+    posts.map((post) => (
+      <AllPostCard key={post._id || post.id} post={post} />
+    ))
+  ) : (
+    <p className="text-center text-gray-500 col-span-full">No posts found.</p>
+  )}
+</div> */}
+
 
 
         <div className="text-center my-12 space-x-2">

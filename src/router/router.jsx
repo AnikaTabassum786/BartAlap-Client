@@ -31,21 +31,21 @@ import AllPost from '../pages/AllPost/AllPost';
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: RootLayout,
+    element:<RootLayout></RootLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
-        Component: Home
+       element:<Home></Home>
       },
       {
         path: '/all-posts',
-        Component: AllPost
+        element: <AllPost></AllPost>
       },
       
       {
         path: '/posts',
-        Component: Posts
+        element:<Posts></Posts>
       },
       {
         path: '/post/:id',
@@ -61,15 +61,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/login',
-        Component: Login
+        element:<Login></Login>
       },
       {
         path: '/register',
-        Component: Register
+        element:<Register></Register>
       },
       {
         path: '/forbidden',
-        Component: Forbidden
+        element:<Forbidden></Forbidden>
       }
     ]
   },
@@ -82,20 +82,20 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: DashBoardHome,
+        element:<DashBoardHome></DashBoardHome>
       },
 
       {
         path: 'myProfile',
-        Component: MyProfile
+        element:<MyProfile></MyProfile>
       },
       {
         path: 'addPost',
-        Component: AddPost
+        element:<AddPost></AddPost>
       },
       {
         path: 'myPost',
-        Component: MyPost
+        element:<MyPost></MyPost>
       },
       {
         path: 'adminProfile',
