@@ -127,7 +127,7 @@ const AddPost = () => {
             <input
               type="text"
               {...register('postTitle', { required: true })}
-              className="w-full border border-black p-2 rounded"
+              className="w-full border border-black p-2 rounded text-black"
             />
             {errors.postTitle && <p className="text-red-500 text-sm">This field is required</p>}
           </div>
@@ -137,7 +137,7 @@ const AddPost = () => {
             <label className="block font-medium text-black">Post Description</label>
             <textarea
               {...register('postDescription', { required: true })}
-              className="w-full border border-black p-2 rounded"
+              className="w-full border border-black p-2 rounded text-black"
               rows={4}
             />
             {errors.postDescription && <p className="text-red-500 text-sm">This field is required</p>}
