@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/post/:id',
-        loader: ({ params }) => fetch(`http://localhost:3000/post/${params.id}`, {
+        loader: ({ params }) => fetch(`https://server-forum.vercel.app/post/${params.id}`, {
           credentials: 'include',
         }),
         element: <PrivateRoute><PostDetails></PostDetails></PrivateRoute>

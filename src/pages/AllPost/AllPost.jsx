@@ -7,7 +7,7 @@
 // import { useNavigate } from "react-router";
 
 // const fetchPosts = async () => {
-//   const { data } = await axios.get("http://localhost:3000/all-post"); 
+//   const { data } = await axios.get("https://server-forum.vercel.app/all-post"); 
 //   return data;
 // };
 
@@ -56,7 +56,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 const fetchPosts = async () => {
-  const { data } = await axios.get("http://localhost:3000/all-post"); 
+  const { data } = await axios.get("https://server-forum.vercel.app/all-post"); 
   return data;
 };
 

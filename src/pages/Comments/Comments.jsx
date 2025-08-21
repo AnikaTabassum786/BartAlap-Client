@@ -7,7 +7,7 @@ const Comments = () => {
   const { data: announcements = [], isLoading, isError } = useQuery({
     queryKey: ['announcements'],
     queryFn: async () => {
-      const res = await axios.get('http://localhost:3000/announcements', {
+      const res = await axios.get('https://server-forum.vercel.app/announcements', {
         withCredentials: true, // important to send cookies
       });
       return res.data;
