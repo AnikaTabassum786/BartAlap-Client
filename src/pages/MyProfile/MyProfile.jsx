@@ -175,7 +175,7 @@ const MyProfile = () => {
 
       {/* Recent Posts */}
       <div>
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">My Recent Posts</h3>
+        <h3 className="text-xl font-semibold  mb-4">My Recent Posts</h3>
         {posts.length === 0 ? (
           <p className="text-gray-500">No recent posts found.</p>
         ) : (
